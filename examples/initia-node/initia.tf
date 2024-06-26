@@ -1,35 +1,9 @@
-# terraform-ssh-initia
-Deploy celestia node on VM
-
-
-## Requirements to configure a initia integration
-The requirements to configure a initia integration include:
-
-* Suggested hardware requirements:
-   * CPU: 8 physical cores / 16 vCPUs
-   * RAM: 128 GB
-   * Storage (SSD): 4 TB NVMe drive
-
-
-## Deploy initia-node
-
-
-### Prepare terraform directory structure and deploy 
-
-Example files you can take: 
-```bash
-git clone https://github.com/Crouton-Digital/terraform-ssh-initia.git
-cd terraform-ssh-celestia/examples/initia-node
-```
-
-Example how to use module: 
-```yaml
 module "initia-node" {
-        #  source          = "../../"
+#  source          = "../../"
   source         = "Crouton-Digital/initia/ssh"
   version        = "0.0.1" # Set last module version
 
-  ssh_host_ip   = "95.217.177.***"
+  ssh_host_ip   = "95.217.177.146"
   ssh_host_port = "22"
   ssh_host_user = "root"
   ssh_host_private_key_file = "~/.ssh/id_rsa"
@@ -57,15 +31,6 @@ module "initia-node" {
 
 }
 
-  output "info" {
+output "info" {
   value = module.initia-node.info
 }
-```
-
-```bash
-$ terraform init
-$ terraform plan
-$ terraform apply
-
-$ terraform output 
-```
