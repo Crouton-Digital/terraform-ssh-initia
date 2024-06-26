@@ -2,8 +2,7 @@
 Deploy celestia node on VM
 
 
-## Requirements to configure a initia integration
-The requirements to configure a initia integration include:
+## Requirements to configure a initia node
 
 * Suggested hardware requirements:
    * CPU: 8 physical cores / 16 vCPUs
